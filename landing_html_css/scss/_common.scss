@@ -1,0 +1,47 @@
+.title{
+   font-size: rem(36);
+   line-height: 1.11;
+   text-transform: uppercase;
+}
+
+
+
+
+
+
+@media (max-width:rem(400)){
+	:root{
+		font-size: 0.625rem;
+	}
+}
+//11px
+@media (min-width:rem(400)) and  (max-width:rem(535)){
+	:root{
+		font-size: 0.6875rem;
+	}
+}
+//12px
+@media (min-width:rem(535)) and  (max-width:rem(670)){
+	:root{
+		font-size: 0.75rem;
+	}
+}
+//13px
+@media (min-width:rem(670)) and  (max-width:rem(805)){
+	:root{
+		font-size: 0.8125rem;
+	}
+}
+//14px
+@media (min-width:rem(805)) and  (max-width:rem(940)){
+	:root{
+		font-size: 0.875rem;
+	}
+}
+
+//15px
+@media (min-width:rem(940)) and (max-width:rem(1075)){
+	:root{
+		font-size: 0.9375rem;
+	}
+}

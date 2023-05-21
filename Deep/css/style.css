@@ -281,8 +281,7 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-	align-self: center;
-    text-align: center;		
+	
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -838,6 +837,8 @@ textarea.form__input {
 
 @media (max-width: 79.6875rem) {
   .main-page__body {
+	  align-self: center;
+    text-align: center;		
     padding-right: 2.5rem;
   }
 

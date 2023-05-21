@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-600&family=Overpass:wght@700&display=swap);
+
 @charset "UTF-8";
 * {
   padding: 0px;
@@ -313,7 +313,7 @@ h6 {
   display: inline-block;
   font-weight: 600;
   font-size: 1.125rem;
-  line-height: 1.78x;
+  line-height: 1.78;
   -webkit-box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
   border-radius: 3px;

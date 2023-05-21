@@ -273,7 +273,7 @@ h6 {
   min-height: 100vh;
 }
 
-.main-page__body {
+  {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 41%;
           flex: 0 0 41%;
@@ -934,8 +934,9 @@ textarea.form__input {
     -webkit-box-flex: 0;
         -ms-flex: none;
             flex: none;
-	   align-self: center;
-    text-align: center;		
+		justify-content: center;
+    		text-align: center;
+    	
 	  
   }
 

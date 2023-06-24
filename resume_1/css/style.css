@@ -1,0 +1,527 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:regular,700&display=swap);
+
+@charset "UTF-8";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #fff;
+  line-height: 1;
+  font-family: "Oswald";
+  font-size: 1rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Oswald";
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+@supports (overflow: clip) {
+  .wrapper {
+    overflow: clip;
+  }
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стилі будуть застосовуватись до
+всіх класів, що містять *__container
+Наприклад header__container, main__container і т.п.
+Сніппет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1111111111;
+  text-transform: uppercase;
+}
+
+.header {
+  background-color: #1F2327;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__body {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.header__label {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.header__text {
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.3888888889;
+}
+
+.header__image-ibg > img {
+  border-radius: 6px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.page {
+  background-color: #191C1F;
+}
+
+.main__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.main__item {
+  padding: 0.9375rem 0.625rem;
+  border-radius: 6px;
+  background-color: #1F2327;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.9375rem;
+}
+
+.item-main__title {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.item-main__text,
+.info__text {
+  font-size: 1.125rem;
+  line-height: 1.3888888889;
+}
+
+.skills {
+  background-color: #1F2327;
+}
+
+.skills__container .skills__items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.skills__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+}
+
+.skills__text::before {
+  content: "";
+  background: url("../img/Idea.svg") no-repeat center;
+  width: 2.5rem;
+  height: 2.5rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 2.5rem;
+          flex: 0 0 2.5rem;
+}
+
+.info__title:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 47.99875em) {
+  .header__body {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
+
+  .header__image-ibg {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+    height: 80vh;
+  }
+}
+
+@media (min-width: 75em) {
+  .header {
+    padding-bottom: 5.25rem;
+  }
+
+  .header {
+    padding-top: 5.25rem;
+  }
+
+  .header__body {
+    padding-right: 3.125rem;
+  }
+
+  .main {
+    padding-bottom: 4.6875rem;
+  }
+
+  .main {
+    padding-top: 4.6875rem;
+  }
+
+  .skills {
+    padding-bottom: 4.6875rem;
+  }
+
+  .skills {
+    padding-top: 4.6875rem;
+  }
+
+  .skills__container .skills__items {
+    gap: 3.125rem;
+  }
+
+  .info {
+    padding-bottom: 4.6875rem;
+  }
+
+  .info {
+    padding-top: 4.6875rem;
+  }
+}
+
+@media (max-width: 20em) {
+  .header {
+    padding-bottom: 0.9375rem;
+  }
+
+  .header {
+    padding-top: 0.9375rem;
+  }
+
+  .header__body {
+    padding-right: 0.625rem;
+  }
+
+  .main {
+    padding-bottom: 1.25rem;
+  }
+
+  .main {
+    padding-top: 1.25rem;
+  }
+
+  .skills {
+    padding-bottom: 1.25rem;
+  }
+
+  .skills {
+    padding-top: 1.25rem;
+  }
+
+  .skills__container .skills__items {
+    gap: 0.0000000625rem;
+  }
+
+  .info {
+    padding-bottom: 1.25rem;
+  }
+
+  .info {
+    padding-top: 1.25rem;
+  }
+}
+
+@media (max-width: 61.99875em) {
+  .header__image-ibg {
+    height: 40vh;
+  }
+}
+
+@media (max-width: 47.99875em) {
+  .header__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.9375rem;
+  }
+
+  .main__items {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.625rem;
+  }
+
+  .skills__container .skills__items {
+    -ms-grid-columns: (1fr)[1];
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .skills__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 20em) and (max-width: 75em) {
+@supports (padding-bottom: clamp( 0.9375rem , -0.6306818182rem  +  7.8409090909vw , 5.25rem )) {
+    .header {
+      padding-bottom: clamp( 0.9375rem , -0.6306818182rem  +  7.8409090909vw , 5.25rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 0.9375rem , -0.6306818182rem  +  7.8409090909vw , 5.25rem )) {
+    .header {
+      padding-bottom: calc(0.9375rem + 4.3125 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (padding-top: clamp( 0.9375rem , -0.6306818182rem  +  7.8409090909vw , 5.25rem )) {
+    .header {
+      padding-top: clamp( 0.9375rem , -0.6306818182rem  +  7.8409090909vw , 5.25rem );
+    }
+}
+
+@supports not (padding-top: clamp( 0.9375rem , -0.6306818182rem  +  7.8409090909vw , 5.25rem )) {
+    .header {
+      padding-top: calc(0.9375rem + 4.3125 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (padding-right: clamp( 0.625rem , -0.2840909091rem  +  4.5454545455vw , 3.125rem )) {
+    .header__body {
+      padding-right: clamp( 0.625rem , -0.2840909091rem  +  4.5454545455vw , 3.125rem );
+    }
+}
+
+@supports not (padding-right: clamp( 0.625rem , -0.2840909091rem  +  4.5454545455vw , 3.125rem )) {
+    .header__body {
+      padding-right: calc(0.625rem + 2.5 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem )) {
+    .main {
+      padding-bottom: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem )) {
+    .main {
+      padding-bottom: calc(1.25rem + 3.4375 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (padding-top: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem )) {
+    .main {
+      padding-top: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem )) {
+    .main {
+      padding-top: calc(1.25rem + 3.4375 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem )) {
+    .skills {
+      padding-bottom: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem )) {
+    .skills {
+      padding-bottom: calc(1.25rem + 3.4375 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (padding-top: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem )) {
+    .skills {
+      padding-top: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem )) {
+    .skills {
+      padding-top: calc(1.25rem + 3.4375 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (gap: clamp( 0.0000000625rem , -1.1363635511rem  +  5.6818180682vw , 3.125rem )) {
+    .skills__container .skills__items {
+      gap: clamp( 0.0000000625rem , -1.1363635511rem  +  5.6818180682vw , 3.125rem );
+    }
+}
+
+@supports not (gap: clamp( 0.0000000625rem , -1.1363635511rem  +  5.6818180682vw , 3.125rem )) {
+    .skills__container .skills__items {
+      gap: calc(0.0000000625rem + 3.1249999375 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (padding-bottom: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem )) {
+    .info {
+      padding-bottom: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem )) {
+    .info {
+      padding-bottom: calc(1.25rem + 3.4375 * (100vw - 20rem) / 55);
+    }
+}
+
+@supports (padding-top: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem )) {
+    .info {
+      padding-top: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem );
+    }
+}
+
+@supports not (padding-top: clamp( 1.25rem , 0.0000000625rem  +  6.25vw , 4.6875rem )) {
+    .info {
+      padding-top: calc(1.25rem + 3.4375 * (100vw - 20rem) / 55);
+    }
+}
+}
